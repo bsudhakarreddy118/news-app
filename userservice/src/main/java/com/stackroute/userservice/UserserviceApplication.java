@@ -9,7 +9,7 @@ public class UserserviceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UserserviceApplication.class, args);
-		System.out.println("Hello world");
+
 	}
 
 }

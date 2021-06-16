@@ -11,30 +11,31 @@ import java.util.Date;
 @ControllerAdvice
 public class UserExceptionHandler {
     /*handling UserNotFoundException*/
-    @ExceptionHandler
-    public ResponseEntity<?> handleUserNotFoundException(UserNotFoundException exception, WebRequest webrequest) {
-        ErrorDetails errorDetails = new ErrorDetails(new Date(), exception.getMessage(), webrequest.getDescription(false));
+    @ExceptionHandler(value = UserNotFoundException.class)
+    public ResponseEntity<?> handleUserNotFoundException(Exception exception) {
+        ErrorDetails errorDetails = new ErrorDetails(new Date(), exception.getMessage()," ");
         return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
     }
 
     /*handling UserExistsException*/
-    @ExceptionHandler
-    public ResponseEntity<?> handleUserExistsException(UserAlreadyExistsException exception, WebRequest webrequest) {
-        ErrorDetails errorDetails = new ErrorDetails(new Date(), exception.getMessage(), webrequest.getDescription(false));
+    @ExceptionHandler(value = UserAlreadyExistsException.class)
+
+    public ResponseEntity<?> handleUserExistsException(Exception exception) {
+        ErrorDetails errorDetails = new ErrorDetails(new Date(), exception.getMessage(), " ");
         return new ResponseEntity<>(errorDetails, HttpStatus.ALREADY_REPORTED);
     }
 
     /*handling Global Exception*/
-    @ExceptionHandler
-    public ResponseEntity<?> handleException(Exception exception, WebRequest webrequest) {
-        ErrorDetails errorDetails = new ErrorDetails(new Date(), exception.getMessage(), webrequest.getDescription(false));
+    @ExceptionHandler(value = Exception.class)
+    public ResponseEntity<?> handleException(Exception exception) {
+        ErrorDetails errorDetails = new ErrorDetails(new Date(), exception.getMessage()," ");
         return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     /*handling IncorrectPasswordException*/
-    @ExceptionHandler
-    public ResponseEntity<?> handleIncorrectPasswordException(IncorrectPasswordException exception, WebRequest webrequest) {
-        ErrorDetails errorDetails = new ErrorDetails(new Date(), exception.getMessage(), webrequest.getDescription(false));
+    @ExceptionHandler(value= IncorrectPasswordException.class)
+    public ResponseEntity<?> handleIncorrectPasswordException(Exception exception) {
+        ErrorDetails errorDetails = new ErrorDetails(new Date(), exception.getMessage(), " ");
         return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
     }
 }
