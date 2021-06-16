@@ -14,7 +14,7 @@
 	<name>boilerplate</name>
 	<description>Capstone project</description>
 	<packaging>pom</packaging>
-	
+
 	<properties>
 		<java.version>11</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
