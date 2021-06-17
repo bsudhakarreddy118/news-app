@@ -1,4 +1,4 @@
-package com.stackroute.favoriteservice.model;
+package com.tackroute.favoriteservice.model;
 
 
 import org.springframework.data.annotation.Id;

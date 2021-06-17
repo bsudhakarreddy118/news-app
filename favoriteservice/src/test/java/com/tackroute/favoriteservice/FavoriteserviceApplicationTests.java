@@ -1,4 +1,4 @@
-package com.stackroute.favoriteservice;
+package com.tackroute.favoriteservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -50,10 +50,11 @@ public class UserController {
         return this.jwtTokenGenerator.generateToken(userr);
     }
 
-    @PutMapping("update/{email}")
+    @PutMapping("/{email}")
     public ResponseEntity<?> editUser(@PathVariable String email, @RequestBody User user) throws UserNotFoundException {
         try {
             User useer = userService.getUserDetails(email);
+            useer.setUsername(user.getUsername());
             useer.setPassword(user.getPassword());
             final User editedUser = this.userService.editUser(useer);
             return new ResponseEntity<User>(editedUser, HttpStatus.OK);

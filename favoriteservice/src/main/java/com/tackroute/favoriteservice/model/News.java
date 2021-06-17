@@ -1,4 +1,4 @@
-package com.stackroute.favoriteservice.model;
+package com.tackroute.favoriteservice.model;
 
 public class News {
 

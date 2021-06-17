@@ -1,8 +1,8 @@
-package com.stackroute.favoriteservice.controller;
+package com.tackroute.favoriteservice.controller;
 
-import com.stackroute.favoriteservice.exception.FavoriteAlreadyExistException;
-import com.stackroute.favoriteservice.model.Favorite;
-import com.stackroute.favoriteservice.service.NewsService;
+import com.tackroute.favoriteservice.exception.FavoriteAlreadyExistException;
+import com.tackroute.favoriteservice.model.Favorite;
+import com.tackroute.favoriteservice.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

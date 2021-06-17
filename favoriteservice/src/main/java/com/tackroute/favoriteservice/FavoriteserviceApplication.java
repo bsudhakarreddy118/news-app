@@ -1,4 +1,4 @@
-package com.stackroute.favoriteservice;
+package com.tackroute.favoriteservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
