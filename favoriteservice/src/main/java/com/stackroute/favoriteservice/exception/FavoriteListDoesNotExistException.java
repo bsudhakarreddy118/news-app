@@ -1,4 +1,4 @@
-package com.tackroute.favoriteservice.exception;
+package com.stackroute.favoriteservice.exception;
 
 public class FavoriteListDoesNotExistException extends RuntimeException {
     public FavoriteListDoesNotExistException() {

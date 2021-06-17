@@ -1,4 +1,4 @@
-package com.tackroute.favoriteservice.model;
+package com.stackroute.favoriteservice.model;
 
 public class News {
 
@@ -68,17 +68,7 @@ public class News {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "News{" +
-                "favoriteId='" + favoriteId + '\'' +
-                ", newsTitle='" + newsTitle + '\'' +
-                ", source='" + source + '\'' +
-                ", author='" + author + '\'' +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
+
 }
 
 

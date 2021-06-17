@@ -1,12 +1,9 @@
-package com.tackroute.favoriteservice.repository;
-
-import com.tackroute.favoriteservice.model.Favorite;
-import com.tackroute.favoriteservice.model.News;
+package com.stackroute.favoriteservice.repository;
+import com.stackroute.favoriteservice.model.Favorite;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-import java.util.Optional;
+
 
 @Repository
 public interface NewsRepository extends MongoRepository<Favorite, String> {

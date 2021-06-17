@@ -1,8 +1,8 @@
-package com.tackroute.favoriteservice.service;
+package com.stackroute.favoriteservice.service;
 
-import com.tackroute.favoriteservice.exception.FavoriteAlreadyExistException;
-import com.tackroute.favoriteservice.model.Favorite;
-import com.tackroute.favoriteservice.model.News;
+import com.stackroute.favoriteservice.model.Favorite;
+import com.stackroute.favoriteservice.exception.FavoriteAlreadyExistException;
+import com.stackroute.favoriteservice.model.News;
 
 import java.util.List;
 import java.util.Optional;

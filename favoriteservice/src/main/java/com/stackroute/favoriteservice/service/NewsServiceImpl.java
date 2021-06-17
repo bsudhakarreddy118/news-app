@@ -1,12 +1,12 @@
-package com.tackroute.favoriteservice.service;
+package com.stackroute.favoriteservice.service;
 
-import com.tackroute.favoriteservice.exception.FavoriteAlreadyExistException;
-import com.tackroute.favoriteservice.exception.FavoriteDoesNotExistException;
-import com.tackroute.favoriteservice.exception.UserAlreadyExistsException;
-import com.tackroute.favoriteservice.exception.UserNotFoundException;
-import com.tackroute.favoriteservice.model.Favorite;
-import com.tackroute.favoriteservice.model.News;
-import com.tackroute.favoriteservice.repository.NewsRepository;
+import com.stackroute.favoriteservice.exception.FavoriteAlreadyExistException;
+import com.stackroute.favoriteservice.exception.FavoriteDoesNotExistException;
+import com.stackroute.favoriteservice.exception.UserAlreadyExistsException;
+import com.stackroute.favoriteservice.exception.UserNotFoundException;
+import com.stackroute.favoriteservice.model.Favorite;
+import com.stackroute.favoriteservice.model.News;
+import com.stackroute.favoriteservice.repository.NewsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @Service
 public class NewsServiceImpl implements NewsService {
-    private final NewsRepository newsRepository;
+    private NewsRepository newsRepository;
 
 
     @Autowired
