@@ -1,15 +1,13 @@
-package com.stackroute.searchservice;
+package com.tackroute.favoriteservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SearchserviceApplication {
+public class FavoriteserviceApplication {
 
 	public static void main(String[] args) {
-
-		SpringApplication.run(SearchserviceApplication.class, args);
-
+		SpringApplication.run(FavoriteserviceApplication.class, args);
 	}
 
 }
