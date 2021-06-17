@@ -1,24 +1,24 @@
-server:
-  port: 8081
-
-spring:
-  application:
-   name: userService
-  dataSource:
-   url: jdbc:mysql://localhost:3306/regdetails
-   username: root
-   password: Bri!!iouser2021
-   jpa:
-     hibernate:
-       ddl-auto: update
-     show_sql: true
-
-
-##to make application as eureka client
-#eureka:
-#  client:
-#    register-with-eureka: true
-#    fetch-registry: true
+#server:
+#  port: 8081
+#
+#spring:
+#  application:
+#   name: userService
+#  dataSource:
+#   url: jdbc:mysql://localhost:3306/regdetails
+#   username: root
+#   password: root
+#   driver-class-name: com.sql.cj.jdbc.Driver
+#  jpa:
+#   properties:
+#    hibernate:
+#     dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#     ddl-auto: update
+#     show_sql: true
+#jwt:
+#  secret.key: secret
+#
+#
 #eureka:
 #  client:
 #    service-url:
