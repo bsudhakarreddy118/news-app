@@ -21,6 +21,9 @@ export default function Header() {
                             <li className="nav-item">
                                 <a className="nav-link" href="">Register</a>
                             </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="">EditProfile</a>
+                            </li>
                     </ul>
                 </div>
             </div>
