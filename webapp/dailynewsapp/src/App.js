@@ -1,21 +1,24 @@
 import './App.css';
-import Header from './Components/header/Header';
+// import Header from './Components/header/Header';
 import Footer from './Components/footer/Footer';
-import EditProfile from './Components/EditProfile/EditProfile';
+// import EditProfile from './Components/EditProfile/EditProfile';
 
 
-import LandingPage from './Components/LandingPage/LandingPage';
+// import LandingPage from './Components/LandingPage/LandingPage';
+import Registration from './Components/Registeration/Registeration';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      {/* <Header/> */}
 
       {/* <Login/> */}
 {/* 
       <EditProfile/> */}
 
-      <LandingPage/>
+      {/* <LandingPage/> */}
+
+      <Registration/>
 
       <Footer/>
     </div>

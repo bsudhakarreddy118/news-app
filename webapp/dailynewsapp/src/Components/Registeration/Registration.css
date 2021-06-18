@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins';
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    /* C:\FrontEndTechnologies(Brillio)\REACT\routing_in_react\public\images\background.jpg */
+}
+
+.signin-heading {
+    color: black;
+}
+
+.sign-in-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 2px 12px 0px rgb(255, 255, 255);
+    padding: 30px 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.btn-btn-success{
+    text-align: center;  
+}
+
+.form-group {
+    background-color: antiquewhite;
+    width: 300px;
+    height: 55px;
+    margin: 10px 0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 5px;
+    border: 1px solid rgb(231, 224, 224);
+    transition: all 0.3s;
+}
+
+.form-group i {
+    text-align: center;
+    line-height: 55px;
+    color: rgb(135, 135, 136);    
+}
+
+.form-control {
+    border: none;
+    outline: none;
+    background: none;
+    font-family: 'Poppins';
+}
+
+.form-group:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.btn-login {
+    width: 100%;
+    background-color: rgb(60, 141, 235);
+    color: rgb(255, 250, 250);
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    transition: 0.3s;
+    text-align: center;  
+}
+
+.btn-login:hover {
+    background-color: rgb(12, 105, 211);
+}
+
+.separtor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+    color: white;
+}
+ 
