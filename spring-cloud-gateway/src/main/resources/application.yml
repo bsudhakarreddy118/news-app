@@ -19,13 +19,13 @@ spring:
             - RewritePath=/user-service(?<segment>/?.*), $\{segment}
 
 
-        - id: searchservice
-          uri: lb://searchservice
+        - id: search-service
+          uri: lb://search-service
           predicates:
-            - Path=/searchservice/**
+            - Path=/search-service/**
           filters:
             - CustomFilter
-            - RewritePath=/searchservice(?<segment>/?.*), $\{segment}
+            - RewritePath=/search-service(?<segment>/?.*), $\{segment}
 
         - id: favorite-service
           uri: lb://favorite-service
