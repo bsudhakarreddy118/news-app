@@ -14,7 +14,7 @@
     background-image: url('images/background.jpg');
     background-size: cover;
     /* C:\FrontEndTechnologies(Brillio)\REACT\routing_in_react\public\images\background.jpg */
-}
+ }
 
 .signin-heading {
     color: black;
@@ -88,4 +88,4 @@
     margin: 10px;
     color: white;
 }
- 
+  
