@@ -11,6 +11,5 @@ public class FavoriteserviceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FavoriteserviceApplication.class, args);
 
-		//System.out.println("hello world");
 	}
 }

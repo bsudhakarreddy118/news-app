@@ -11,7 +11,7 @@
     width: 100%;
     height: 100vh;
     font-family: 'Poppins';
-    background-image: url('images/background.jpg');
+    background-image: url('./images/backround.jpg');
     background-size: cover;
     /* C:\FrontEndTechnologies(Brillio)\REACT\routing_in_react\public\images\background.jpg */
 }

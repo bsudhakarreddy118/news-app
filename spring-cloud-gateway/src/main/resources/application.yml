@@ -34,7 +34,13 @@ spring:
           filters:
             - CustomFilter
             - RewritePath=/favorite-service(?<segment>/?.*), $\{segment}
-
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            exposedHeaders: "*"
 
 eureka:
   client:
