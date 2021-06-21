@@ -31,55 +31,7 @@ import './Login.css';
         console.log(email, password);
       };
     
-  //    return (
-        // <div className="container mt-5">
-        //   <h2 className="text-primary text-center" id="heading3">
-        //     Login
-        //   </h2>
-        //   <div className="mb-3">
-        //     <label htmlFor="email" className="form-label">
-        //       Email 
-        //     </label>
-        //     <input
-        //       type="email"
-        //       className="form-control"
-        //       id="email"
-        //       onChange={(e) => setEmail(e.target.value)}
-        //     />
-          {/* </div>
-          <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">
-              Password
-            </label>
-            <input
-              type="password"
-              className="form-control"
-              id="password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-    
-          <button */}
-        //     type="submit"
-        //     id="btnLogin"
-        //     className="btn btn-primary"
-        //     onClick={handleSubmit}
-        //   >
-        //     Submit
-        //   </button>
-        //   <span>
-        //     {error ? (
-        //       <small className="text-danger text-center d-flex h3">
-        //         Invalid credentaial
-        //       </small>
-        //     ) : (
-        //       ''
-        //     )}
-        //   </span>
-        // </div>
-     // );
-    //}
-    
+ 
 
 
 
@@ -101,7 +53,7 @@ import './Login.css';
                     <form className="signin-form">
                             <div className="form-group">
                                  <i className="fas fa-email"></i>
-                                 <input type="email" onChange={(e) => setEmail(e.target.value)} className="form-control"  placeholder="Username"/>
+                                 <input type="email" onChange={(e) => setEmail(e.target.value)} className="form-control"  placeholder="Email"/>
                             </div>
                             <div className="form-group">
                                 <i className="fas fa-key"></i>

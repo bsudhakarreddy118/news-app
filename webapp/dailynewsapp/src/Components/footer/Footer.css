@@ -3,8 +3,12 @@
     bottom: 0;
     padding: 20px 10px;
     width: 100%;
-    background-color: rgb(61, 60, 60);
+    background-color: rgba(10, 4, 4, 0.897);
     color: white;
     text-align: center;
     font-size: 20pt;
+}
+span{
+    position: relative;
+    bottom:0;
 }

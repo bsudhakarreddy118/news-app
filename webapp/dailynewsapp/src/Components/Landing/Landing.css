@@ -1,0 +1,156 @@
+section{
+    width:100%;
+    height:480px;
+    background-color:rgb(206, 189, 189);
+    background-size: cover;
+    
+}
+container{
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+.img-rounded{
+    position: relative;
+    top: 50px;
+    left:-500px;
+    height:350px;
+}
+h1 {
+   
+    color:black;
+    font-family: cursive;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 2.625em;
+    position: relative;
+    left: 600px;
+    bottom: 50px;
+    animation: newss 3s linear 3s 1 alternate;
+}
+@keyframes newss
+{
+    0%{
+        
+        transform:rotateY(360deg);
+        
+    }
+   
+}
+h5{
+
+    color:black;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.625em;
+    position: relative;
+    left:450px;
+    animation: news 3s linear 0s 1 alternate;
+    
+}
+@keyframes news
+{
+    0%{
+        top:0px;
+        left:-500px;
+        transform: perspective(700px)rotateX(360deg);
+        
+    }
+   
+}
+.block1{
+    visibility: hidden;
+    position: relative;
+        top: -625px;
+        left:40px;
+        width:200px;
+        background-color:black;
+        color:white;
+        font-family: cursive;
+        overflow: hidden;
+   
+    animation: block1 3s linear 6s infinite alternate;
+}
+@keyframes block1
+{
+    0%{
+        
+        visibility:visible;
+         }
+   
+}
+.block2{
+    visibility: hidden;
+    position: relative;
+        top:-670px;
+        left:280px;
+        width:200px;
+        background-color:black;
+        color:white;
+        font-family: cursive;
+        overflow: hidden;
+   
+    animation: block1 3s linear 8.5s infinite alternate;
+}
+@keyframes block2
+{
+    0%{
+        
+        visibility:visible;
+         }
+   
+}
+.img-rounded{
+    visibility: hidden;
+    position: relative;
+    top:100px;
+    left:-490px;
+    animation: img 3s linear 8s infinite alternate;
+
+}
+@keyframes img
+{
+    0%{
+        
+        visibility: visible;
+        
+        
+    }
+   
+}
+li{
+
+    position: relative;
+    right: 50px;
+    margin:  0  10px 0 10px;
+}
+
+#header{
+
+    background-color: rgb(105, 10, 29);
+   
+}
+
+#button{
+    background-color: darkgrey;
+}
+.imm1{
+    visibility: hidden;
+    position: relative;
+    top: -250px;
+    left:-250px;
+    height:350px;
+    width: 190px;
+    animation: img 3s linear 9s infinite alternate;
+}
+@keyframes img1
+{
+    0%{
+        
+        visibility: visible;
+        
+        
+    }
+   
+}
