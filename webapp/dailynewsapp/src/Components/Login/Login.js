@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Login.css';
+import { Link } from "react-router-dom";
     
     export default function Login() {
       const [email, setEmail] = useState('');
@@ -8,11 +9,10 @@ import './Login.css';
      // let history = useHistory();
     
       const handleSubmit = () => {
-        console.log("submitted");
         fetch('http://localhost:8084/user-service/api/v1/login', {
           method: 'POST',
           headers: {
-            Accept: 'application/json',
+            // Accept: 'application/json',
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({ email, password }),
@@ -20,7 +20,6 @@ import './Login.css';
           .then((res) => res.json())
           .then((data) => {
             if (data.token) {
-              console.log('token:', data.token);
               localStorage.setItem('token', data.token);
               localStorage.setItem('email', email);
               setError(false);
@@ -37,17 +36,17 @@ import './Login.css';
         <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container-fluid">
-                    <a className="navbar-brand" href="#">NewsApp</a>
+                    <Link to="/newsApp" className="nav-link"><h2>NewsApp</h2></Link>
                     <div className="text-right">
                     {/* <button className="btn btn-outline-success" ></button> */}
                     </div>
                     </div>
             </nav>
-
-        <div className="container">
+            <section>
+<container>
+        <div>
             <div className="sign-in-card">
                <h2 className="signin-heading">Login</h2>
-               <img src="images\login.svg" width="30%" alt=""/>
                     <form className="signin-form">
                             <div className="form-group">
                                  <i className="fas fa-email"></i>
@@ -58,7 +57,7 @@ import './Login.css';
                                 <input type="password" onChange={(e) => setPassword(e.target.value)} className="form-control" placeholder="Password"/>
                             </div>
                             <div className="text-center"  >
-                                <button className="btn btn-success " onClick={handleSubmit}  >login</button>
+                                <button className="btn btn-success " type="button" onClick={handleSubmit}  >login</button>
                          </div>
                             <span>
                             {error ? (
@@ -72,6 +71,11 @@ import './Login.css';
                     </form>
              </div>
         </div>
+        </container>
+       </section>
+       <div data-testid="footdiv" className="footer">
+    <span><h4>News Manager &copy; 2021 </h4></span>
+    </div>
         </div>    
     );
 }

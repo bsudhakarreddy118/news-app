@@ -17,9 +17,7 @@ export default function Landing() {
                            
                         </ul>
                         <ul className="navbar-nav ml-auto">
-                        <li className="nav-item">
-                                <a href="/" className="nav-link">Home</a>
-                            </li>
+                        
                             <li className="nav-item">
                             <Link to="/register" className="nav-link">Register</Link>
                             </li>
@@ -35,26 +33,20 @@ export default function Landing() {
                
              
                 <section>
-                     <div>
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwFfWqnXMy5bdYq5zuu_GyCliztWhdmkz5N9N9XZzgfjQXMSeOJPgvlfknAjYryibUJP4&usqp=CAU" className="img-rounded" alt="harryNews"></img>
-    </div>
-    <div>
-
-<img src="https://t3y4b2m7.rocketcdn.me/wp-content/uploads/2013/09/Top-Stories-Bing-News-2.png" className="imm1" alt="harryNews"></img>
-    </div>
-    <div className="block1">
-      <h2>Series</h2></div>
-
-    <div className="block2">
-      <h2>news</h2>
-    </div>
+                     
                 <container>
                 <h5 class="text-uppercase">Daily</h5>
                 <h1 class="text-uppercase">NewsApp</h1>		
                 </container>
                 </section>
+                <div data-testid="footdiv" className="footer">
+<span><h4>News Manager &copy; 2021 </h4></span>
+</div>
                 </div>
+
+
+
+
         
     )
 }

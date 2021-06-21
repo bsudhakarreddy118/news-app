@@ -14,7 +14,8 @@ import Landing from './Components/Landing/Landing';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './Components/Login/Login';
 import Header from './Components/header/Header';
-import Registeration from './Components/Registeration/Registeration'
+import Registeration from './Components/Registeration/Registeration';
+import Dashboad from './Components/Dashboard/Dashboard';
 
 
 
@@ -23,7 +24,7 @@ function App() {
   return (
     <div className="App">
       
-     
+     <Dashboad/>
       
       
 
@@ -37,13 +38,24 @@ function App() {
 
             <Route exact path="/login" component={Login}/>
 
-            
+            <Route exact path="/" component={Registeration}/>
+
+  <Route exact path="/newsApp" component={Landing}/>
+
+  
+  <Route exact path="/reglogin" component={Login}/>
+  
 
           </Switch>
           </Router> */}
 
+
+
+
+
+
       {/* <Registration/> */}
-      <EditProfile/>
+      {/* <EditProfile/> */}
 
       
     </div>

@@ -4,17 +4,12 @@
     padding: 0;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    font-family: 'Poppins';
-    background-image: url('./images/backround.jpg');
-    background-size: cover;
-    /* C:\FrontEndTechnologies(Brillio)\REACT\routing_in_react\public\images\background.jpg */
-}
+container{
+    position: absolute;
+    top: 100px;
+    left: 450px;
+  }
+   
 
 .signin-heading {
     color: black;
