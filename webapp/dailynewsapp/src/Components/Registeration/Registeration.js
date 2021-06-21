@@ -1,7 +1,7 @@
 import React from 'react';
- import "./Registration.css";
+ import "./Registeration.css";
 import { useState } from "react";
-export default function Registration() {
+export default function Registeration() {
 
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');

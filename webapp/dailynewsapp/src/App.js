@@ -1,29 +1,49 @@
 import './App.css';
-//import Header from './Components/header/Header';
-//import Footer from './Components/footer/Footer';
-// import EditProfile from './Components/EditProfile/EditProfile';
+// import Dashboad from './Components/Dashboard/Dashboard';
+// import EditProfile from './Components/editProfile/editProfile';
+// import Header from './Components/header/Header';
+import Footer from './Components/footer/Footer';
+import Landing from './Components/Landing/Landing';
+
+
+
 // import Login from './Components/Login/Login';
 
 // import LandingPage from './Components/LandingPage/LandingPage';
-//import Registration from './Components/Registeration/Registeration';
-import Dashboard from './Components/dashboard/Dashboard';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from './Components/Login/Login';
+import Header from './Components/header/Header';
+
+
+
 
 function App() {
   return (
     <div className="App">
-      {/* <Header/> */}
+      
+     
+      
+      
 
-      {/* <Login/> */}
-{/* 
-      <EditProfile/> */}
+      <Router>
 
-      {/* <LandingPage/> */}
+          <Switch>
+
+            <Route exact path="/" component={Landing}/>
+
+            {/* <Route exact path="/register" component={Registration}/> */}
+
+            <Route exact path="/login" component={Login}/>
+
+            
+
+          </Switch>
+          </Router>
 
       {/* <Registration/> */}
 
-      <Dashboard/>
-
-      {/* <Footer/> */}
+      
     </div>
   );
 }

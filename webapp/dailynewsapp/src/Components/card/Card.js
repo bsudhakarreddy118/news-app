@@ -1,26 +1,46 @@
-import { v4 as uuidv4 } from 'uuid';
-import React, { useState } from 'react'
-const Card = (props) => {
-    const title = props.title;
-    const Poster =props.Poster;
-    const author = props.author;
-    const description = props.description;
-    const AddNewsHandler = () => {
-        props.AddFunction({ id: uuidv4(), title,Poster,author,description });
-    }
+import React from 'react';
 
-    return (
-        <div className="col-md-3">
-            <div className="card mt-3">
-                <div className="card-body">
-                <img src={props.Poster} className="card-img-top" alt="..." />
-                    <h5 className="card-title">{props.title}</h5>
-                    <p className="card-text">{props.author}</p>
-                    <p className="card-text">{props.description}</p>
-                    <a href="#" className="btn btn-primary" onClick={AddNewsHandler}>ReadLater</a>
-                </div>
-            </div>
-        </div>
-    )
-};
-export default Card;
+export default function Card({ news, saveFunction, disableButton }) {
+  const handleSave = () => {
+    saveFunction(news);
+    alert('Data saved locally');
+  };
+  return (
+    <div className="card mb-3">
+      {news.category ? (
+        ''
+      ) : (
+        <img
+          className="card-img-top h-25"
+          src={news ? news.urlToImage : ''}
+          alt="Sorry was not able to fetch img"
+        />
+      )}
+      <div className="card-body">
+        <h5 className="card-title h2 text-secondary">
+          {news ? news.title : ''}
+        </h5>
+        <h5 className="card-title h2 text-secondary">
+          {news.name ? news.name : ''}
+        </h5>
+        <p className="card-text">{news ? news.description : ''}</p>
+        <p className="card-text">
+          {news.category ? 'Category: ' + news.category : ''}
+        </p>
+        <p className="card-text  text-secondary">
+          <small className="text-muted">{news ? news.author : ''}</small>
+        </p>
+        <p className="card-text">
+          <a href={news ? news.url : ''}>Link to news</a>
+        </p>
+        {disableButton ? (
+          <button className="btn btn-primary " onClick={handleSave}>
+            Save
+          </button>
+        ) : (
+          <p></p>
+        )}
+      </div>
+    </div>
+  );
+}
