@@ -30,6 +30,8 @@ public class UserController {
 
     @PostMapping("register")
     public User registerUser(@RequestBody User user) throws UserAlreadyExistsException {
+        System.out.println("user details:"+user.getEmail());
+        System.out.println("user details:"+user.getUsername());
 
         return this.userService.registerUser(user);
     }
@@ -46,6 +48,8 @@ public class UserController {
 
     @PostMapping("/login")
     public Map<String,String> authenticateUser(@RequestBody UserDto userDto) throws UserNotFoundException, IncorrectPasswordException {
+        System.out.println("user email:"+userDto.getEmail());
+        System.out.println("password:"+userDto.getPassword());
         final User userr = this.userService.authenticateUser(userDto.getEmail(), userDto.getPassword());
         return this.jwtTokenGenerator.generateToken(userr);
     }

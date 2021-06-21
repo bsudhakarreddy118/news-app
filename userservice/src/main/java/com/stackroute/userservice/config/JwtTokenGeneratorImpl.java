@@ -22,6 +22,7 @@ public class JwtTokenGeneratorImpl implements JwtTokenGenerator {
                 //using HS256 algorithm for generating token
                 .signWith(SignatureAlgorithm.HS256, secretKey)
                 .compact();
+        System.out.println("token:"+token);
         return Map.of("token", token);
     }
 }

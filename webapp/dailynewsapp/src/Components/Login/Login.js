@@ -8,6 +8,7 @@ import './Login.css';
      // let history = useHistory();
     
       const handleSubmit = () => {
+        console.log("submitted");
         fetch('http://localhost:8084/user-service/api/v1/login', {
           method: 'POST',
           headers: {
@@ -19,6 +20,7 @@ import './Login.css';
           .then((res) => res.json())
           .then((data) => {
             if (data.token) {
+              console.log('token:', data.token);
               localStorage.setItem('token', data.token);
               localStorage.setItem('email', email);
               setError(false);

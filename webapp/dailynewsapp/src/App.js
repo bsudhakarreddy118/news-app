@@ -1,6 +1,6 @@
 import './App.css';
 // import Dashboad from './Components/Dashboard/Dashboard';
-// import EditProfile from './Components/editProfile/editProfile';
+import EditProfile from './Components/editProfile/editProfile';
 // import Header from './Components/header/Header';
 import Footer from './Components/footer/Footer';
 import Landing from './Components/Landing/Landing';
@@ -14,6 +14,7 @@ import Landing from './Components/Landing/Landing';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './Components/Login/Login';
 import Header from './Components/header/Header';
+import Registeration from './Components/Registeration/Registeration'
 
 
 
@@ -26,22 +27,23 @@ function App() {
       
       
 
-      <Router>
+      {/* <Router>
 
           <Switch>
 
             <Route exact path="/" component={Landing}/>
 
-            {/* <Route exact path="/register" component={Registration}/> */}
+            <Route exact path="/register" component={Registeration}/>
 
             <Route exact path="/login" component={Login}/>
 
             
 
           </Switch>
-          </Router>
+          </Router> */}
 
       {/* <Registration/> */}
+      <EditProfile/>
 
       
     </div>
