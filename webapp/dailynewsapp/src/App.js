@@ -1,11 +1,12 @@
 import './App.css';
-import Header from './Components/header/Header';
-import Footer from './Components/footer/Footer';
+//import Header from './Components/header/Header';
+//import Footer from './Components/footer/Footer';
 // import EditProfile from './Components/EditProfile/EditProfile';
 // import Login from './Components/Login/Login';
 
 // import LandingPage from './Components/LandingPage/LandingPage';
-import Registration from './Components/Registeration/Registeration';
+//import Registration from './Components/Registeration/Registeration';
+import Dashboard from './Components/dashboard/Dashboard';
 
 function App() {
   return (
@@ -18,9 +19,11 @@ function App() {
 
       {/* <LandingPage/> */}
 
-      <Registration/>
+      {/* <Registration/> */}
 
-      <Footer/>
+      <Dashboard/>
+
+      {/* <Footer/> */}
     </div>
   );
 }

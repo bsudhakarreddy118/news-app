@@ -26,7 +26,7 @@ public class SearchController {
 
     @GetMapping("/welcome")
     public String getSearchPage() {
-        return "landingPage.js";
+        return "Welcome to news app";
     }
 
     @GetMapping("/news")
