@@ -1,98 +1,74 @@
 import React from 'react'
-import { useState,useEffect } from "react";
-import Card from "../Card/Card";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import './Dashboard.css';
+
 
 
 
 export default function Dashboard() {
 
-    const [news, setNews] = useState('');
-    // const [countriesName, setcountriesName] = useState('');
+    const [countriesName, setCountriesName] = useState('');
+    const [categoryName, setCategoryName] = useState('');
     const [details,setDetails]= useState([]);
 
-    useEffect(() => {
-        fetch(`http://localhost:8084/search-service/api/v1/news`)
-            .then(res => res.json())
-            .then(data => setDetails(data));
-    }, [])
-
     function getdetail(){
-
-        // console.log(countriesName,"hi");
        
-            fetch(`http://localhost:8084/search-service/api/v1/news`,{
-                headers: {
-                    'token': `${localStorage.getItem('token')}`
-                  }
+            fetch(`http://localhost:8084/search-service/api/v1/${countriesName}/${categoryName}`,{
+            //     headers: {
+            //     'token': `${localStorage.getItem('token')}`
+            //   }
 
+    
             })
-           
                      .then(res => res.json())
-                     .then(data => console.log(data) );
+                    //  .then(data=> {
+                    //      console.log(data.map())
+                    //  })
+                   .then(data => setDetails(data.articles))
 
-        
     }
 
 
 
 
-
-    
-
+     console.log(details);
 
 
     return (
         <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark " id="header">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark conn" id="header">
             <div className="container-fluid ">
                 <a href="/" className="navbar-brand">NewsApp</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-              <div style={{paddingLeft:400}}>
-
-              <div class="dropdown">
-  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <Link to="/EditProfile" className="nav-link dropdown-item">EditProfile</Link>
-        <Link to="/logout" className="nav-link dropdown-item">Logout</Link>
-    
-  </div>
-  
-</div>
+                <div style={{paddingLeft:400}}>
 
 
 
+            <select onChange={(e) => setCategoryName(e.target.value)} >
+                            <option>Select Category</option>
+                            <option>business</option>
+                            <option>sport</option>
+                            <option>politics</option>
+                            <option>entertainment</option>
+                        </select>
 
-                        
-
-
-
-                </div> 
-
-
-                {/* <div className="collapse navbar-collapse" id="navbarSupportedContent"> */}
+                </div>
                 <div style={{paddingRight:400}}>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                        
                     </ul>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <form className="d-flex" action="#">
-              {/* <input
-                // className="form-control me-2"
-                // value={inputValue}
-                // ref={inputRef}
-                // onChange={(e) => setInputValue(inputRef.current.value)}
-                value={countriesName}
-                 onChange={(e) => setcountriesName(e.target.value)}
+              <input
+
+                 onChange={(e) => setCountriesName(e.target.value)}
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
-              /> */}
+              />
               <button
                 className="btn btn-outline-success"
                 type="button"
@@ -104,20 +80,71 @@ export default function Dashboard() {
                     </ul>
 
                 </div>
+                <div className="btn-group">
+                <button type="button" className="btn btn-dark dropdown-toggle con" data-bs-toggle="dropdown" aria-expanded="false">
+                    Profile
+                </button>
+                <ul className="dropdown-menu">
+                    <li><a className="dropdown-item" href="#">Action</a></li>
+                    <li><a className="dropdown-item" href="#">Another action</a></li>
+                    <li><a className="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr className="dropdown-divider"/></li>
+                    <li><a className="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+                </div>
             </div>
         </nav>
            
          
-         <section>
-                {
-                    details.map(item => <Card  title={item.title} Poster={item.urlToImage} author={item.author} description={item.description} />)
+            <section>
+            <div className="row">
+                    {
+                        details.map(item => (  
+                        
+                        <div className="col-md-3">
+                        
+                                <div className="card">
+                                    
+                                    {/* <img src={`https://tse2.mm.bing.net/th/id/OIP.zVKdiMLwKrwhSjWvVe3IxQHaE7?pid=ImgDet&rs=1`} className="card-img-top" alt="..."/> */}
+                                    <img src={`${item.urlToImage}`} className="card-img-top" alt="..."/>
 
-                }
+                                    <div className="card-body bg-gray">
+                                        {/* <i className="far fa-times-circle fa-lg float-end text-danger" onClick={DeleteContactHandler.bind(this, props.id)}></i> */}
+                                        {/* <Link to={`/edit/${props.id}`}><i className="fas fa-pencil-alt fa-lg float-end text-primary px-2"></i></Link> */}
+                                        
+                                        
+                                        <p className="card-text" value={item.author}>Author :{item.author}</p>
+                                        
+                                        <p className="card-title" value={item.title}>Title :{item.title}</p>
+                                        
+                                        <p className="card-text" value={item.description}>Description:{item.description}</p>
 
-            
-               
+                                        {/* <p className="card-text" value={item.url}>url :{item.url}</p> */}
+
+                                        {/* <p className="card-text" value={item.urlToImage}>urlToImage :{item.urlToImage}</p> */}
+
+                                        <p className="card-text" value={item.publishedAt}>publishedAt :{item.publishedAt}</p>
+
+                                        <p className="card-text" value={item.content}>content :{item.content}</p>
+
+
+
+                                    </div>
+                                    <div className="card-footer bg-transparent border-success"><a href="/">Add to favourite</a></div>
+                                </div>
+                            </div>
+                            
+                         
+                        ))
+                    }
+                    </div>
+
+                   
  
             </section>
+            <div data-testid="footdiv" className="footer">
+                    <span><h4>News Manager &copy; 2021 </h4></span>
+            </div>
         </div>
 
     )

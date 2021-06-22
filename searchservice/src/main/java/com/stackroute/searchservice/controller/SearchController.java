@@ -55,7 +55,7 @@ public class SearchController {
 
     }
 
-    @GetMapping("/countries/{countriesname}/{categoryName}")
+    @GetMapping("/{countriesname}/{categoryName}")
     public ResponseEntity<?> getSportsNews(@PathVariable String countriesname, @PathVariable String categoryName) {
         String url = "https://newsapi.org/v2/top-headlines?country=" + countriesname + "&category=" + categoryName + "&apiKey=" + apiKey;
         HttpHeaders headers = new HttpHeaders();

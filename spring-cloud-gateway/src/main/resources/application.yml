@@ -21,14 +21,14 @@ spring:
           predicates:
             - Path=/search-service/**
           filters:
-            - CustomFilter
+#            - CustomFilter
             - RewritePath=/search-service(?<segment>/?.*), $\{segment}
         - id: favorite-service
           uri: lb://favorite-service
           predicates:
             - Path=/favorite-service/**
           filters:
-            - CustomFilter
+#            - CustomFilter
             - RewritePath=/favorite-service(?<segment>/?.*), $\{segment}
       globalcors:
         corsConfigurations:

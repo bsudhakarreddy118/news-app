@@ -17,7 +17,7 @@ import Header from './Components/header/Header';
 import Registeration from './Components/Registeration/Registeration';
 import Dashboad from './Components/Dashboard/Dashboard';
 import Dashboard from './Components/Dashboard/Dashboard';
-import Fav from './Components/favourite/favourite/Fav/Fav';
+//import Fav from './Components/favourite/favourite/Fav/Fav';
 
 
 
@@ -30,7 +30,7 @@ function App() {
      
       {/* <Login/> */}
 
-      <Router>
+       {/* <Router>
 
           <Switch>
 
@@ -42,18 +42,18 @@ function App() {
 
             <Route exact path="/" component={Registeration}/>
 
-  <Route exact path="/newsApp" component={Landing}/>
+          <Route exact path="/newsApp" component={Landing}/>
 
   
   <Route exact path="/reglogin" component={Login}/>
   
 
           </Switch>
-          </Router> 
+          </Router>  */}
 
+ 
 
-
-
+<Dashboad/>
 
 
       {/* <Registration/> */}

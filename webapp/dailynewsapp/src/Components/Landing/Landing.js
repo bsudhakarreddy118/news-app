@@ -40,8 +40,8 @@ export default function Landing() {
                 </container>
                 </section>
                 <div data-testid="footdiv" className="footer">
-<span><h4>News Manager &copy; 2021 </h4></span>
-</div>
+                    <span><h4>News Manager &copy; 2021 </h4></span>
+                </div>
                 </div>
 
 
