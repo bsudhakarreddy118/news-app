@@ -1,13 +1,13 @@
 import './App.css';
-// import Dashboad from './Components/Dashboard/Dashboard';
+
 import EditProfile from './Components/editProfile/editProfile';
-// import Header from './Components/header/Header';
+
 import Footer from './Components/footer/Footer';
 import Landing from './Components/Landing/Landing';
 
 
 
-// import Login from './Components/Login/Login';
+
 
 // import LandingPage from './Components/LandingPage/LandingPage';
 
@@ -16,6 +16,8 @@ import Login from './Components/Login/Login';
 import Header from './Components/header/Header';
 import Registeration from './Components/Registeration/Registeration';
 import Dashboad from './Components/Dashboard/Dashboard';
+import Dashboard from './Components/Dashboard/Dashboard';
+import Fav from './Components/favourite/favourite/Fav/Fav';
 
 
 
@@ -24,11 +26,11 @@ function App() {
   return (
     <div className="App">
       
-     <Dashboad/>
-      
-      
+     {/* <Fav/> */}
+     
+      {/* <Login/> */}
 
-      {/* <Router>
+      <Router>
 
           <Switch>
 
@@ -47,7 +49,7 @@ function App() {
   
 
           </Switch>
-          </Router> */}
+          </Router> 
 
 
 
