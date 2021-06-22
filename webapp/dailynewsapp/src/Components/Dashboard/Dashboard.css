@@ -4,6 +4,14 @@ section{
     width:100%;
     height: fit-content;
 }
+
+/* .dash{
+    background-image: url('./images/newss.jpg');
+    background-size: cover;
+    width:100%;
+    height: fit-content;
+
+} */
 .con{
     position: relative;
     right: 200px;

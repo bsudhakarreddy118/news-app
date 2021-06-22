@@ -39,10 +39,12 @@ import { Link } from "react-router-dom";
                     <Link to="/newsApp" className="nav-link"><h2>NewsApp</h2></Link>
                     <div className="text-right">
                     {/* <button className="btn btn-outline-success" ></button> */}
+          {/* <Link to="/dashboard"><Button style={myStyle}><p>Click Me!</p></Button>
+</Link> */}
                     </div>
                     </div>
             </nav>
-            <section>
+            <section className="log">
 <container>
         <div>
             <div className="sign-in-card">
@@ -57,7 +59,10 @@ import { Link } from "react-router-dom";
                                 <input type="password" onChange={(e) => setPassword(e.target.value)} className="form-control" placeholder="Password"/>
                             </div>
                             <div className="text-center"  >
-                                <button className="btn btn-success " type="button" onClick={handleSubmit}  >login</button>
+                            <Link to="/dashboard"> <button  className="btn btn-success " type="button" onClick={handleSubmit}  >login</button></Link>
+                         
+                                 {/* <Link to="/dashboard" className="nav-link" onClick={handleSubmit} >login</Link>
+                                               */}
                          </div>
                             <span>
                             {error ? (

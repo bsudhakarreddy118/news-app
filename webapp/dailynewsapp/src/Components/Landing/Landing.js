@@ -32,7 +32,7 @@ export default function Landing() {
             
                
              
-                <section>
+                <section className="landing">
                      
                 <container>
                 <h5 class="text-uppercase">Daily</h5>

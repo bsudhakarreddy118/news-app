@@ -84,6 +84,9 @@ export default function Dashboard() {
                 <button type="button" className="btn btn-dark dropdown-toggle con" data-bs-toggle="dropdown" aria-expanded="false">
                     Profile
                 </button>
+                {/* <button type="button" className="btn btn-dark  con" daria-expanded="false">
+                   Favourite
+                </button> */}
                 <ul className="dropdown-menu">
                     <li><a className="dropdown-item" href="#">Action</a></li>
                     <li><a className="dropdown-item" href="#">Another action</a></li>
@@ -96,7 +99,7 @@ export default function Dashboard() {
         </nav>
            
          
-            <section>
+            <section >
             <div className="row">
                     {
                         details.map(item => (  

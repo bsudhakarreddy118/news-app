@@ -2,9 +2,9 @@
 
 
 
-section{
+.reglog{
     width: 100%;
-    height: 472px;
+    height: 484px;
     /* font-family: 'Poppins'; */
     background-image: url('./images/newss.jpg');
     background-size: cover;

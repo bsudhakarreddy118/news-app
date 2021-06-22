@@ -6,11 +6,6 @@ import Footer from './Components/footer/Footer';
 import Landing from './Components/Landing/Landing';
 
 
-
-
-
-// import LandingPage from './Components/LandingPage/LandingPage';
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './Components/Login/Login';
 import Header from './Components/header/Header';
@@ -30,7 +25,7 @@ function App() {
      
       {/* <Login/> */}
 
-       {/* <Router>
+       <Router>
 
           <Switch>
 
@@ -46,14 +41,19 @@ function App() {
 
   
   <Route exact path="/reglogin" component={Login}/>
+  <Route exact path="/" component={Login}/>
+  {/* <Link to="/dashboard" className="nav-link" onClick={handleSubmit} >login</Link>
+                                               */}
+          <Route exact path="/dashboard" component={Dashboard}/>
+
   
 
           </Switch>
-          </Router>  */}
+          </Router> 
 
  
 
-<Dashboad/>
+{/* <Dashboad/> */}
 
 
       {/* <Registration/> */}
