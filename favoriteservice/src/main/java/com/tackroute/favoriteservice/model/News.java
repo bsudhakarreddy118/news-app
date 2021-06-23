@@ -3,8 +3,6 @@ package com.tackroute.favoriteservice.model;
 public class News {
 
     private String favoriteId;
-    private String newsTitle;
-    private String source;
     private String author;
     private String title;
     private String description;
@@ -16,11 +14,10 @@ public class News {
     public News() {
     }
 
-    public News(String favoriteId, String newsTitle, String source, String author, String title, String description, String url, String urlToImage, String publishedAt, String content) {
+    public News(String favoriteId,String author, String title, String description, String url, String urlToImage, String publishedAt, String content) {
 
         this.favoriteId = favoriteId;
-        this.newsTitle = newsTitle;
-        this.source = source;
+
         this.author = author;
         this.title = title;
         this.description = description;
@@ -38,21 +35,6 @@ public class News {
         this.favoriteId = favoriteId;
     }
 
-    public String getNewsTitle() {
-        return newsTitle;
-    }
-
-    public void setNewsTitle(String newsTitle) {
-        this.newsTitle = newsTitle;
-    }
-
-    public String getSource() {
-        return source;
-    }
-
-    public void setSource(String source) {
-        this.source = source;
-    }
 
     public String getAuthor() {
         return author;

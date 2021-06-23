@@ -49,7 +49,7 @@ fetch('http://localhost:8084/user-service/api/v1/register', {      
                   <div className="container-fluid">
 
                   
-                  <Link to="/newsApp" className="nav-link"><h2>NewsApp</h2></Link>
+                  <Link to="/newsApp" className="nav-link"><h2>DailyNews</h2></Link>
 
                   <div className="text-right">
 
@@ -81,7 +81,7 @@ fetch('http://localhost:8084/user-service/api/v1/register', {      
                                  <input type="text"  onChange={(e)=>setUsername(e.target.value)} className="form-control"  placeholder="Username"/>
                             </div>
                             <div className="form-group">
-                                <i className="fas fa-key"></i>
+                            <i class="fas fa-envelope"></i>
                                 <input type="email" onChange={(e)=>setEmail(e.target.value)} className="form-control" placeholder="Email"/>
                             </div>
                             <div className="form-group">

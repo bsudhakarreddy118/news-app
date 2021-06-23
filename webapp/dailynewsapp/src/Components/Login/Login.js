@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import './Login.css';
 import { Link } from "react-router-dom";
+import { useHistory } from 'react-router';
     
     export default function Login() {
       const [email, setEmail] = useState('');
       const [password, setPassword] = useState('');
       const [error, setError] = useState(false);
-     // let history = useHistory();
+     let history = useHistory();
     
       const handleSubmit = () => {
         fetch('http://localhost:8084/user-service/api/v1/login', {
@@ -23,8 +24,8 @@ import { Link } from "react-router-dom";
               localStorage.setItem('token', data.token);
               localStorage.setItem('email', email);
               setError(false);
-             // setIsAuthenticated(true);
-            //  history.push('/');
+            //  setIsAuthenticated(true);
+             history.push('/dashboard');
             } else {
               setError(true);
             }
@@ -36,7 +37,7 @@ import { Link } from "react-router-dom";
         <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container-fluid">
-                    <Link to="/newsApp" className="nav-link"><h2>NewsApp</h2></Link>
+                    <Link to="/newsApp" className="nav-link"><h2>DailyNews</h2></Link>
                     <div className="text-right">
                     {/* <button className="btn btn-outline-success" ></button> */}
           {/* <Link to="/dashboard"><Button style={myStyle}><p>Click Me!</p></Button>
@@ -51,7 +52,7 @@ import { Link } from "react-router-dom";
                <h2 className="signin-heading">Login</h2>
                     <form className="signin-form">
                             <div className="form-group">
-                                 <i className="fas fa-email"></i>
+                            <i class="fas fa-envelope"></i>
                                  <input type="email" onChange={(e) => setEmail(e.target.value)} className="form-control"  placeholder="Email"/>
                             </div>
                             <div className="form-group">
@@ -59,9 +60,9 @@ import { Link } from "react-router-dom";
                                 <input type="password" onChange={(e) => setPassword(e.target.value)} className="form-control" placeholder="Password"/>
                             </div>
                             <div className="text-center"  >
-                            <Link to="/dashboard"> <button  className="btn btn-success " type="button" onClick={handleSubmit}  >login</button></Link>
-                         
-                                 {/* <Link to="/dashboard" className="nav-link" onClick={handleSubmit} >login</Link>
+                             <button  className="btn btn-success " type="button" onClick={handleSubmit}  >login</button>
+                          
+                                 {/* <Link to="/dashboard" className="btn btn-success" onClick={handleSubmit} >login</Link>
                                                */}
                          </div>
                             <span>

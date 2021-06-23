@@ -2,13 +2,45 @@ import React from 'react'
 import './Landing.css';
 import { Link } from "react-router-dom";
 
+import {useEffect,useState} from 'react'
+
 export default function Landing() {
+
+
+
+    const [content, setContent] = useState([]);
+    useEffect(() => {
+       fetch('')
+       .then(res=>res.json())
+       .then(data=>{
+            setContent(data);
+       });
+    }, [])
+//     return (
+//         <div>
+//             <div  className="container mt-3">
+//                 <div  className="row">
+//                     {
+//                         content.map((country, i) =>
+//                             <CountryCard key={i}
+//                                 flag={country.countryInfo.flag}
+//                                 country={country.country}
+//                                 cases={country.cases}
+//                                 active={country.active}
+//                                 deaths={country.deaths} />
+//                         )
+//                     }
+//                 </div>
+//             </div>
+//         </div>
+//     )
+// }
     return (
        
             <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark " id="header">
                 <div className="container-fluid">
-                    <a href="/" className="navbar-brand">NewsApp</a>
+                    <a href="/" className="navbar-brand">DailyNews</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -17,7 +49,6 @@ export default function Landing() {
                            
                         </ul>
                         <ul className="navbar-nav ml-auto">
-                        
                             <li className="nav-item">
                             <Link to="/register" className="nav-link">Register</Link>
                             </li>
@@ -33,8 +64,11 @@ export default function Landing() {
                
              
                 <section className="landing">
+                    
                      
                 <container>
+                  
+                    
                 <h5 class="text-uppercase">Daily</h5>
                 <h1 class="text-uppercase">NewsApp</h1>		
                 </container>
